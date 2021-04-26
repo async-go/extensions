@@ -1,0 +1,22 @@
+{
+
+  "manifest_version": 2,
+  "name": "AsyncGo",
+  "version": "0.1",
+
+  "description": "Create AsyncGo topics for your team from any page",
+
+  "icons": {
+    "48": "icons/logo.svg"
+  },
+
+  "background": {
+    "scripts": ["asyncgo.js"]
+  },
+
+  "permissions": [
+    "menus",
+    "activeTab"
+  ]
+
+}
