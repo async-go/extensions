@@ -27,7 +27,7 @@ browser.menus.create({
 }, onCreated);
 
 function buildUrl(context, selection) {
-   return 'https://app.asyncgo.com/teams/' + asyncgo_team_id + '/topics/new?context="' + encodeURIComponent(context) + '"&selection="' + encodeURIComponent(selection) + '"'
+   return 'https://app.asyncgo.com/teams/' + asyncgo_team_id + '/topics/new?context=' + encodeURIComponent(context) + '&selection=' + encodeURIComponent(selection) + ''
 }
 
 browser.menus.onClicked.addListener((info, tab) => {
