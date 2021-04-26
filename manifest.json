@@ -7,7 +7,9 @@
   "description": "Create AsyncGo topics for your team from any page",
 
   "icons": {
-    "48": "icons/logo.svg"
+    "16": "icons/logo-16.png",
+    "48": "icons/logo-48.png",
+    "128": "icons/logo-128.png"
   },
 
   "background": {
@@ -15,7 +17,7 @@
   },
 
   "permissions": [
-    "menus",
+    "contextMenus",
     "activeTab"
   ]
 
