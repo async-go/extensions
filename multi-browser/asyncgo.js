@@ -1,7 +1,3 @@
-// Hardcode team ID for now
-// TODO: make configurable
-asyncgo_team_id = 1
-
 function onCreated() {
   if (chrome.runtime.lastError) {
     console.log(`Error: ${chrome.runtime.lastError}`);
@@ -27,7 +23,7 @@ chrome.contextMenus.create({
 }, onCreated);
 
 function buildUrl(context, selection) {
-   return 'https://app.asyncgo.com/teams/' + asyncgo_team_id + '/topics/new?context=' + encodeURIComponent(context) + '&selection=' + encodeURIComponent(selection) + ''
+   return 'https://app.asyncgo.com/teams/-/topics/new?context=' + encodeURIComponent(context) + '&selection=' + encodeURIComponent(selection) + ''
 }
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
