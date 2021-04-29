@@ -23,7 +23,7 @@ chrome.contextMenus.create({
 }, onCreated);
 
 function buildUrl(context, selection) {
-   return 'https://app.asyncgo.com/teams/-/topics/new?context=' + encodeURIComponent(context) + '&selection=' + encodeURIComponent(selection) + ''
+   return 'https://app.asyncgo.com?do=newTopic&context=' + encodeURIComponent(context) + '&selection=' + encodeURIComponent(selection) + ''
 }
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
