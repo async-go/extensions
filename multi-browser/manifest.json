@@ -1,6 +1,6 @@
 {
 
-  "manifest_version": 3,
+  "manifest_version": 2,
   "name": "AsyncGo Topic Creator",
   "homepage_url": "https://asyncgo.com",
   "version": "0.2",
@@ -14,17 +14,13 @@
   },
 
   "background": {
-    "service_worker": "asyncgo.js"
+    "scripts": ["asyncgo.js"]
   },
 
   "permissions": [
     "contextMenus",
     "activeTab",
     "tabs"
-  ],
-
-  "host_permissions": [
-    "http://app.asyncgo.com/"
   ]
 
 }
