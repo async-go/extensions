@@ -11,20 +11,7 @@ chrome.contextMenus.create({
 });
 
 function openTab (context, selection) {
-  const url = 'http://localhost:3000/extension/new_topic/'
-  const method = 'POST'
-
-  const tab = chrome.tabs.create({url: 'about:blank'});
-
-  const form = JSON.stringify({context: context, selection: selection})
-
-  fetch(url, {
-      method: method,
-      body: form
-      })
-      .catch(err => {
-          tab.close();
-      });
+  chrome.tabs.create({url: 'https://app.asyncgo.com', active: true}, function (tab) { chrome.tabs.executeScript(tab.id, {code: `alert("hello");`}); });
 }
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
