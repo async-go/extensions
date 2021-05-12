@@ -4,9 +4,6 @@ const urlParams = new URLSearchParams(window.location.search)
 const selection = urlParams.get('selection')
 const context = urlParams.get('context')
 
-console.log(selection)
-console.log(context)
-
 fetch('https://app.asyncgo.com/extension/new_topic', {
   method: 'POST',
   mode: 'no-cors',
