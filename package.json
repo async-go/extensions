@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "standard": "^16.0.3"
+  },
+  "standard": {
+    "globals": [ "chrome", "fetch" ]
+  }
+}
