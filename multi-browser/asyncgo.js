@@ -10,17 +10,17 @@ chrome.contextMenus.create({
   contexts: ['page']
 })
 
-function openTab (context, selection) {
-  chrome.tabs.create({ url: 'jump.html?context=' + encodeURIComponent(context) + '&selection=' + encodeURIComponent(selection), active: true })
+function buildUrl (context, selection) {
+  return 'https://app.asyncgo.com/extension/new_topic?context=' + encodeURIComponent(context) + '&selection=' + encodeURIComponent(selection) + ''
 }
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   switch (info.menuItemId) {
     case 'save-selection':
-      openTab(info.pageUrl, info.selectionText)
+      chrome.tabs.create({ url: buildUrl(info.pageUrl, info.selectionText) })
       break
     case 'save-page':
-      openTab(info.pageUrl, '')
+      chrome.tabs.create({ url: buildUrl(info.pageUrl, '') })
       break
   }
 })
