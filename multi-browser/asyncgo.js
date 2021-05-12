@@ -11,7 +11,7 @@ chrome.contextMenus.create({
 });
 
 function openTab (context, selection) {
-  chrome.tabs.create({url: 'https://app.asyncgo.com', active: true}, function (tab) { chrome.tabs.executeScript(tab.id, {code: `alert("hello");`}); });
+  chrome.tabs.create({url: 'jump.html?context=' + encodeURIComponent(context) + '&selection=' + encodeURIComponent(selection), active: true})
 }
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
