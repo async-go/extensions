@@ -1,9 +1,8 @@
 {
-
   "manifest_version": 2,
   "name": "AsyncGo Topic Creator",
   "homepage_url": "https://asyncgo.com",
-  "version": "0.2",
+  "version": "1.0",
 
   "description": "This add-on makes it easy to create AsyncGo topics for your team from any page, such as your ticketing system, documents, or chat. If you select some text from the page it can also be brought over as highlighted content.",
 
@@ -17,8 +16,5 @@
     "scripts": ["asyncgo.js"]
   },
 
-  "permissions": [
-    "contextMenus"
-  ]
-
+  "permissions": ["contextMenus"]
 }
