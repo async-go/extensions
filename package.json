@@ -1,8 +1,12 @@
 {
   "dependencies": {
+    "prettier": "^2.5.1",
     "standard": "^16.0.3"
   },
   "standard": {
-    "globals": [ "chrome", "fetch" ]
+    "globals": [
+      "chrome",
+      "fetch"
+    ]
   }
 }
